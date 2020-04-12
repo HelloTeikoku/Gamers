@@ -20,10 +20,10 @@ ja:
     attributes:
       user:
         current_password: "現在のパスワード"
-        name: 名前
+        name: ニックネーム
         email: メールアドレス
         password: "パスワード"
-        password_confirmation: "確認用パスワード"
+        password_confirmation: "パスワード（確認）"
         remember_me: "次回から自動的にログイン"
     models:
       user: "ユーザ"
