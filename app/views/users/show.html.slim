@@ -1,0 +1,10 @@
+.text-center    
+    = image_tag @user.image.url(:thumb)
+    br
+    =@user.name
+    br
+    =@user.comment
+    br
+    =@user.profile
+    br
+    =link_to "プロフィールを編集する",edit_user_registration_path 
