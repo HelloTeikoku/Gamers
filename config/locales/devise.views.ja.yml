@@ -23,7 +23,7 @@ ja:
         name: ニックネーム
         email: メールアドレス
         password: "パスワード"
-        password_confirmation: "パスワード（確認）"
+        password_confirmation: "パスワード(確認)"
         remember_me: "次回から自動的にログイン"
     models:
       user: "ユーザ"
