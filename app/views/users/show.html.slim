@@ -1,10 +1,14 @@
 .text-center    
     = image_tag @user.image.url(:thumb)
     br
-    =@user.name
-    br
-    =@user.comment
-    br
-    =@user.profile
-    br
-    =link_to "プロフィールを編集する",edit_user_registration_path 
+    = @user.name
+.text-box
+    = @user.comment 
+.text-box
+    = simple_format(@user.profile)
+br
+.text-center
+    - if current_user == @user
+        = link_to "プロフィールを編集する",edit_user_registration_path
+    - else
+        = link_to "ユーザー一覧",users_path
