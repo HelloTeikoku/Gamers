@@ -1,0 +1,45 @@
+//ユーザー一覧画面
+.users{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0% 5%;
+  border: 1px solid yellow;
+  .user_wrap{
+    width: 300px;
+    //border: 1px solid black;
+    margin: 10px 15px;
+  }
+}
+
+.user_info_img {
+  border: solid 1px black;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  .user_image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+a:hover img {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.user_comment_box{
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+//ユーザー詳細画面

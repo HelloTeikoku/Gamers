@@ -1,11 +1,11 @@
 h1 ユーザー一覧
-
-- @users.each do |user|
-    div.image_size
-      = image_tag user.image.url(:thumb)
-    br
-    = link_to user.name, user_path(user.id)
-    br
-    .user-box
-      = user.comment
-    br
+.users
+  - @users.each do |user|
+    .user_wrap
+      .user_info_img
+        = link_to user_path(user.id)
+          = image_tag user.image.url(:thumb),class:'user_image'
+      .user_name
+        = user.name
+      .user_comment_box
+        = user.comment
