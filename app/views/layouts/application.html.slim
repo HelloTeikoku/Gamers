@@ -8,9 +8,25 @@ html
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    p.notice
-      = notice
-    p.alert
-      = alert
+    nav.navbar.navbar-expand.navbar-light style="background-color: white;"
+      = link_to "Gamers", users_path, id: "logo", class: "navbar-brand"
+      ul.navbar-nav.ml-auto
+        -if current_user
+          li.nav-item
+            = link_to "お気に入り", "#", class: "nav-link"
+          li.nav-item
+            = link_to "メッセージ", "#", class: "nav-link"
+          li.nav-item
+            = link_to current_user.name, user_path(current_user.id), class: "nav-link"
+        -else
+          li.nav-item
+            = link_to "新規登録", new_user_registration_path, class: "nav-link"
+          li.nav-item
+            = link_to "ログイン", new_user_session_path, class: "nav-link"
+    - flash.each do |key, value|
+      = content_tag(:div, value, class: "flash flash__#{key}")
     .container
       = yield
+    footer.footer
+      .container
+        p 2020（c）Gamers, Inc.

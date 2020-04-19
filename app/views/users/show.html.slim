@@ -1,6 +1,7 @@
 .user_show
-  = image_tag @user.image.url(:thumb)
-  .user_name
+  .user_show_img
+    = image_tag @user.image.url(:thumb),class: "user_show_image"
+  .user_show_name
     = @user.name
   .text-center
     = @user.comment

@@ -1,45 +1,44 @@
 //ユーザー一覧画面
 .users{
   display: flex;
-  flex-wrap: wrap;
-  padding: 0% 5%;
-  border: 1px solid yellow;
+  flex-flow: row wrap;
+  justify-content: center;
+  //border: 1px solid yellow;
   .user_wrap{
-    width: 300px;
+    width: 165px;
     //border: 1px solid black;
-    margin: 10px 15px;
+    margin: 20px 15px;
+    padding-bottom: 30px;
   }
 }
 
 .user_info_img {
-  border: solid 1px black;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  margin: 0 auto;
+  border: solid 1px rgba(0, 0, 0, 0.300);
   overflow: hidden;
   border-radius: 50%;
   .user_image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
   }
 }
 
 a:hover img {
   opacity: 0.8;
-  filter: alpha(opacity=80);
-  -moz-opacity: 0.8;
-  -webkit-transition: 0.3s ease-in-out;
-  -moz-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+}
+
+.user_name{
+  font-size: 14px;
+  margin: 10px 8px 2px;
+  text-align: center;
 }
 
 .user_comment_box{
-  border: solid 1px black;
-  border-radius: 10px;
+  border: 1px solid #8ecfd3;
+  border-radius: 6px;
+  padding: 5px;
+  text-align: left;
+  font-size: 12px;
+  color: #788086;
 }
-
 //ユーザー詳細画面
