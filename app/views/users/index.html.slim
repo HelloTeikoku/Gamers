@@ -1,4 +1,9 @@
-h1 ユーザー一覧
+.index_title
+  h2 さがす
+= search_form_for @q,class: 'mb-5' do |f|
+  .input_group
+    .search
+      = f.search_field :name_or_profile_or_comment_cont,class: 'form-control'
 .users
   - @users.each do |user|
     .user_wrap
@@ -9,3 +14,5 @@ h1 ユーザー一覧
         = user.name
       .user_comment_box
         = user.comment
+.paginate
+  = paginate @users

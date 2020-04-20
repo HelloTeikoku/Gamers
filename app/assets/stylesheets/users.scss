@@ -1,5 +1,15 @@
 //ユーザー一覧画面
+.index_title{
+  margin: 50px 0 10px 0;
+}
+
+.search{
+  width: 350px;
+}
+
 .users{
+  width: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -7,7 +17,7 @@
   .user_wrap{
     width: 165px;
     //border: 1px solid black;
-    margin: 20px 15px;
+    margin: 20px 20px;
     padding-bottom: 30px;
   }
 }
@@ -34,11 +44,22 @@ a:hover img {
 }
 
 .user_comment_box{
+  height: 48px;
   border: 1px solid #8ecfd3;
   border-radius: 6px;
   padding: 5px;
   text-align: left;
   font-size: 12px;
   color: #788086;
+}
+
+.paginate{
+  display: flex;
+  justify-content: center;
+}
+
+.pagination>li>a {
+  border: none;
+  color: #696969;
 }
 //ユーザー詳細画面
