@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   root 'homes#index'
 
   resources :users, only: %i[index show]
+  resources :favorites, only: %i[create destroy]
 end
