@@ -10,5 +10,5 @@
   - if current_user == @user
     = link_to "プロフィールを編集する",edit_user_registration_path
   - else
+    = render partial: 'favorites/favorite_button', locals: { user: @user }
     = link_to "ユーザー一覧",users_path
-= render partial: 'favorites/favorite_button', locals: { user: @user }

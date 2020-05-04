@@ -1,5 +1,10 @@
 class FavoritesController < ApplicationController
-  before_action :set_user
+  before_action :set_user,only: [:create, :destroy]
+
+  def index
+    @favorite_users = current_user.favorings
+  end
+
   def create
     favoring = current_user.favorite_user(@user)
     if favoring.save

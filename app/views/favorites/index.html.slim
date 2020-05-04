@@ -1,0 +1,17 @@
+.text-center
+  .favorite_title
+    h2 お気に入り一覧
+  - if @favorite_user.present?
+    = link_to "ユーザー一覧",users_path
+  - else
+    .users
+      - @favorite_users.each do |user|
+        .user_wrap
+          .user_info_img
+            = link_to user_path(user.id)
+              = image_tag user.image.url(:thumb),class:'user_image'
+          .user_name
+            = user.name
+          .user_comment_box
+            = user.comment
+    = link_to "ユーザー一覧",users_path
