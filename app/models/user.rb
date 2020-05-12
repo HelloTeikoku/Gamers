@@ -3,6 +3,8 @@ class User < ApplicationRecord
   has_many :favorings, through: :favorites, source: :favorite
   has_many :reverse_of_favorites, class_name: 'Favorite', foreign_key: 'favorite_id'
   has_many :favoriters, through: :reverse_of_favorites, source: :user
+  has_many :messages, dependent: :destroy
+  has_many :entries, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
